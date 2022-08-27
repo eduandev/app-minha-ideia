@@ -1,26 +1,26 @@
 package edu.and.appminhaideia.model;
 
-import android.util.Log;
-
-import edu.and.appminhaideia.controller.ICrud;
-import edu.and.appminhaideia.core.AppUtil;
-
 public class Cliente {
 
+    private int id;
     private String nome;
     private String email;
-    private String telefone;
-    private int idade;
-    private boolean sexo;
+
 
     public Cliente() {}
 
-    public Cliente(String nome, String email, String telefone, int idade, boolean sexo) {
+    public Cliente(int id, String nome, String email) {
+        this.id = id;
         this.nome = nome;
         this.email = email;
-        this.telefone = telefone;
-        this.idade = idade;
-        this.sexo = sexo;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -38,30 +38,5 @@ public class Cliente {
     public void setEmail(String email) {
         this.email = email;
     }
-
-    public String getTelefone() {
-        return telefone;
-    }
-
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
-    }
-
-    public int getIdade() {
-        return idade;
-    }
-
-    public void setIdade(int idade) {
-        this.idade = idade;
-    }
-
-    public boolean isSexo() {
-        return sexo;
-    }
-
-    public void setSexo(boolean sexo) {
-        this.sexo = sexo;
-    }
-
 
 }

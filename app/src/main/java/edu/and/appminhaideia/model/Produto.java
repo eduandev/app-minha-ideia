@@ -1,19 +1,25 @@
 package edu.and.appminhaideia.model;
 
-import android.util.Log;
-
-import edu.and.appminhaideia.core.AppUtil;
-
 public class Produto {
 
+    private int id;
     private String nome;
     private String fornecedor;
 
     public Produto() {}
 
-    public Produto(String nome, String fornecedor) {
+    public Produto(int id, String nome, String fornecedor) {
+        this.id = id;
         this.nome = nome;
         this.fornecedor = fornecedor;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -31,5 +37,6 @@ public class Produto {
     public void setFornecedor(String fornecedor) {
         this.fornecedor = fornecedor;
     }
+
 
 }
